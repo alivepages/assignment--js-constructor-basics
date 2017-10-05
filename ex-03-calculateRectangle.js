@@ -5,7 +5,20 @@
  *     [2]. `perimeter`: formula to calculate it: L + L + L + L
  */
 
+function Rectangle(ancho, largo) {
+    this.ancho = ancho
+    this.largo = largo
+}
 
+ Rectangle.prototype.area = function () {
+    var areas = this.ancho * this.largo
+    return areas
+ };
+
+ Rectangle.prototype.perimeter = function () {
+   var perimetrs = (this.largo + this.ancho) * 2
+   return perimetrs
+ };
 
 
 

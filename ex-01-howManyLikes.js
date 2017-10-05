@@ -2,15 +2,26 @@
  * Write a function called `Facebook` and shoud have two main functions:
  *
  *     [1]. howManyLikes: should return the likes number
- *     [2]. like: should increment the likes counting by one 
+ *     [2]. like: should increment the likes counting by one
  */
+var Facebook = function() {
+  this.likes = 20
+}
 
+Facebook.prototype.howManyLikes = function () {
+  return this.likes
+};
 
+Facebook.prototype.like = function () {
 
+  this.likes = this.likes + 1 
+console.log(this.likes);
+};
 
 
 //*~*~*-*~*~*~*~*~ Don't Touch *~*~*~*~*~*~*~*~*~*~*~
 var theFacebook = new Facebook();
+console.log(theFacebook.likes);
 
 console.log("[0] Check if `theFacebook` is an instance of `Facebook` ")
 console.assert( theFacebook instanceof Facebook )
